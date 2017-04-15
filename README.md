@@ -3,17 +3,7 @@ Unit Converter Ultimate
 
 <img src="screens/temp1.png" width="300" align="right">
 
-*A simple, lightweight, Material Design themed unit converter for Android.*
-
-<a href="https://play.google.com/store/apps/details?id=com.physphil.android.unitconverterultimate&utm_source=global_co&utm_medium=prtnr&utm_content=Mar2515&utm_campaign=PartBadge&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1">
-  <img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png"
-       alt="Get it on Google Play" 
-       height="80"/>
-</a><a href="https://f-droid.org/app/com.physphil.android.unitconverterultimate">
-  <img src="https://f-droid.org/badge/get-it-on.png"
-       alt="Get it on F-Droid"
-       height="80">
-</a>
+*A simple, lightweight, Material Design themed unit converter for iOS.*
 
 
 The beautiful Material Design user interface allows for quick and easy conversions from a number in one unit to another. The goal is to keep it simple - you won't be overwhelmed with an excess of options and settings, allowing you to perform your desired conversion as quickly as possible. Perfect for work, school or in the kitchen.
@@ -54,4 +44,4 @@ Contributions are more than welcome and very appreciated!  Please create all Pul
 
 Developed by
 ------------
-Phil Shadlyn - physphil@gmail.com &nbsp;&nbsp;•&nbsp;&nbsp; [Install from Google Play](https://play.google.com/store/apps/details?id=com.physphil.android.unitconverterultimate)
+Phil Shadlyn - physphil@gmail.com &nbsp;

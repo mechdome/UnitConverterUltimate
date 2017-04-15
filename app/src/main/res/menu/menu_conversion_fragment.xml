@@ -50,4 +50,10 @@
         android:title="@string/prefs_title_donate"
         app:showAsAction="never"/>
 
+    <item
+        android:id="@+id/menu_about_mechdome"
+        android:orderInCategory="140"
+        android:title="@string/prefs_about_mechdome"
+        app:showAsAction="never"/>
+
 </menu>

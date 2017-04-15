@@ -26,7 +26,7 @@ import android.net.Uri;
  */
 public abstract class BaseIntentFactory {
 
-    public static final String GITHUB_REPO = "https://github.com/physphil/UnitConverterUltimate-Studio";
+    public static final String GITHUB_REPO = "https://github.com/mechdome/UnitConverterUltimate";
     private static final String EMAIL_ADDRESS = "physphil@gmail.com";
 
     /**

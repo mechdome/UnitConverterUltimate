@@ -17,6 +17,7 @@
 package com.physphil.android.unitconverterultimate.fragments;
 
 import android.content.ActivityNotFoundException;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.Preference;
@@ -24,6 +25,7 @@ import android.preference.PreferenceCategory;
 import android.preference.PreferenceFragment;
 import android.widget.Toast;
 
+import com.mechdome.aboutmechdome.AboutMechDomeActivity;
 import com.physphil.android.unitconverterultimate.BuildConfig;
 import com.physphil.android.unitconverterultimate.Preferences;
 import com.physphil.android.unitconverterultimate.R;
@@ -48,32 +50,32 @@ public class PreferencesFragment extends PreferenceFragment implements SharedPre
         addPreferencesFromResource(R.xml.preferences);
 
         // Add listeners to preferences
-        Preference unitRequest = findPreference("unit_request");
-        unitRequest.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
-            @Override
-            public boolean onPreferenceClick(Preference preference) {
-                requestUnit();
-                return true;
-            }
-        });
-
-        Preference rateApp = findPreference("rate_app");
-        rateApp.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
-            @Override
-            public boolean onPreferenceClick(Preference preference) {
-                rateApp();
-                return true;
-            }
-        });
-
-        Preference openIssue = findPreference("open_issue");
-        openIssue.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
-            @Override
-            public boolean onPreferenceClick(Preference preference) {
-                openIssue();
-                return true;
-            }
-        });
+//        Preference unitRequest = findPreference("unit_request");
+//        unitRequest.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+//            @Override
+//            public boolean onPreferenceClick(Preference preference) {
+//                requestUnit();
+//                return true;
+//            }
+//        });
+//
+//        Preference rateApp = findPreference("rate_app");
+//        rateApp.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+//            @Override
+//            public boolean onPreferenceClick(Preference preference) {
+//                rateApp();
+//                return true;
+//            }
+//        });
+//
+//        Preference openIssue = findPreference("open_issue");
+//        openIssue.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+//            @Override
+//            public boolean onPreferenceClick(Preference preference) {
+//                openIssue();
+//                return true;
+//            }
+//        });
 
         Preference viewSource = findPreference("view_source");
         viewSource.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
@@ -84,19 +86,28 @@ public class PreferencesFragment extends PreferenceFragment implements SharedPre
             }
         });
 
-        Preference donate = findPreference("donate");
-        if (BuildConfig.FLAVOR.equals(UnitConverterApplication.BUILD_FLAVOUR_GOOGLE)) {
-            donate.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
-                @Override
-                public boolean onPreferenceClick(Preference preference) {
-                    startActivity(IntentFactory.getDonateIntent(getActivity()));
-                    return true;
-                }
-            });
-        }
-        else {
-            ((PreferenceCategory) findPreference("other")).removePreference(donate);
-        }
+//        Preference aboutMechdome = findPreference("about_mechdome");
+//        viewSource.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+//            @Override
+//            public boolean onPreferenceClick(Preference preference) {
+//                startActivity(new Intent(getActivity(), AboutMechDomeActivity.class));
+//                return true;
+//            }
+//        });
+
+//        Preference donate = findPreference("donate");
+//        if (BuildConfig.FLAVOR.equals(UnitConverterApplication.BUILD_FLAVOUR_GOOGLE)) {
+//            donate.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+//                @Override
+//                public boolean onPreferenceClick(Preference preference) {
+//                    startActivity(IntentFactory.getDonateIntent(getActivity()));
+//                    return true;
+//                }
+//            });
+//        }
+//        else {
+//            ((PreferenceCategory) findPreference("other")).removePreference(donate);
+//        }
     }
 
     @Override

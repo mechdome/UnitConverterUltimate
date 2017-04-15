@@ -18,6 +18,7 @@ package com.physphil.android.unitconverterultimate.fragments;
 
 import android.content.ClipData;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -41,6 +42,7 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.ViewFlipper;
 
+import com.mechdome.aboutmechdome.AboutMechDomeActivity;
 import com.physphil.android.unitconverterultimate.BuildConfig;
 import com.physphil.android.unitconverterultimate.Preferences;
 import com.physphil.android.unitconverterultimate.PreferencesActivity;
@@ -509,6 +511,10 @@ public final class ConversionFragment extends Fragment implements ConversionView
 
             case R.id.menu_donate:
                 startActivity(IntentFactory.getDonateIntent(getActivity()));
+
+            case R.id.menu_about_mechdome:
+                startActivity(new Intent(getActivity(), AboutMechDomeActivity.class));
+                return true;
 
             default:
                 return super.onOptionsItemSelected(item);

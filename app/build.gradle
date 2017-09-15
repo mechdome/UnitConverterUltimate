@@ -22,8 +22,8 @@ if (file('google-services.json').exists()) {
 }
 
 android {
-    compileSdkVersion 24
-    buildToolsVersion "24.0.2"
+    compileSdkVersion 22
+    buildToolsVersion '25.0.0'
 
     signingConfigs {
         release {
@@ -42,7 +42,7 @@ android {
     defaultConfig {
         applicationId "com.physphil.android.unitconverterultimate"
         minSdkVersion 16
-        targetSdkVersion 24
+        targetSdkVersion 22
         versionCode 50200
         versionName '5.2'
     }
@@ -50,10 +50,10 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
             shrinkResources false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
-            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//            signingConfig signingConfigs.release
         }
     }
 
@@ -66,12 +66,17 @@ android {
             // Adds Firebase crash analytics
         }
     }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
 }
 
 dependencies {
-    compile 'com.android.support:appcompat-v7:24.2.0'
-    compile 'com.android.support:recyclerview-v7:24.2.0'
-    compile 'com.android.support:design:24.2.0'
+    compile 'com.android.support:appcompat-v7:22+'
+    compile 'com.android.support:recyclerview-v7:22+'
+    compile 'com.android.support:design:22+'
     compile 'com.squareup.retrofit2:retrofit:2.1.0'
     compile 'com.squareup.retrofit2:converter-gson:2.1.0'
     compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
@@ -85,5 +90,5 @@ dependencies {
 
     testCompile 'junit:junit:4.12'
     testCompile 'org.mockito:mockito-core:1.9.0'
-    compile 'com.mechdome:MechDome-About:+'
+    compile 'com.mechdome:MechDome-About:1.6'
 }
